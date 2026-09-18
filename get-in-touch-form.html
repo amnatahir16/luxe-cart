@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get in Touch</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 16px;
+  }
+
+  .card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 620px;
+    padding: 56px 48px 48px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  }
+
+  .spark {
+    font-size: 22px;
+    color: #ec4899;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 56px;
+    letter-spacing: 1px;
+    margin: 0 0 18px;
+    color: #111111;
+    line-height: 1;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #8a8a8a;
+    line-height: 1.7;
+    margin: 0 0 36px;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .field {
+    position: relative;
+  }
+
+  .field input,
+  .field .fake-select {
+    width: 100%;
+    background: #f3f3f3;
+    border: none;
+    padding: 18px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #9a9a9a;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .field input::placeholder {
+    color: #9a9a9a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+  }
+
+  .field input:focus {
+    box-shadow: inset 0 0 0 1.5px #ec4899;
+  }
+
+  .plus {
+    font-size: 18px;
+    color: #9a9a9a;
+    line-height: 1;
+  }
+
+  .submit-btn {
+    background: #ec5a9c;
+    background: linear-gradient(135deg, #ee5a9f, #e34b93);
+    border: none;
+    color: #ffffff;
+    padding: 18px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: opacity 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.9;
+  }
+
+  .policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .policy input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #ec4899;
+    cursor: pointer;
+  }
+
+  .policy label {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 40px 24px 32px; }
+    h1 { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <span class="spark">✦</span>
+    <h1>GET IN TOUCH</h1>
+    <p class="subtitle">Leave your details and we will contact<br>you shortly to discuss the project</p>
+
+    <form>
+      <div class="field">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+
+      <div class="field">
+        <input type="tel" placeholder="Phone" required>
+      </div>
+
+      <div class="field">
+        <div class="fake-select" id="serviceSelect">
+          <span id="serviceLabel">Choose the Service</span>
+          <span class="plus">+</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <input type="text" placeholder="Your Request">
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+      <div class="policy">
+        <input type="checkbox" id="privacy" required>
+        <label for="privacy">Agree to the Privacy Policy</label>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
